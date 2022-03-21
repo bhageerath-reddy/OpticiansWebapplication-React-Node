@@ -43,6 +43,16 @@ app.post("/SalesBook", (req, res) => {
     }
   });
 });
+app.post("/itemDataUpload", (req, res) => {
+  collection = db.collection("itemDataUpload");
+  collection.insertOne(req.body, (err, result) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send("Item data uploaded successfully");
+    }
+  });
+});
 
 app.post("/delete", (req, res) => {
   collection = db.collection("cart");

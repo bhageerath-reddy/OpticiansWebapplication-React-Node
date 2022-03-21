@@ -130,23 +130,21 @@ class SalesManagement extends Component {
             <fieldset className="sales-item">
               <legend>sales Date</legend>
               <input
-                className="items Purchased"
-                input
-                type="text"
-                name="itemspurchased"
-                value={this.state.itemspurchased}
-                onChange={this.changeitemspurchased}
+                type="date"
+                name="appointmentDate"
+                value={this.state.appointmentDate}
+                onChange={this.changeappointmentDate}
                 required
               />
             </fieldset>
             <fieldset className="paymentmode">
               <legend>sales Time</legend>
               <input
-                type="text"
-                name="paymentmode"
+                type="time"
+                name="appointmentTime"
                 required
-                value={this.state.paymentmode}
-                onChange={this.changepaymentmode}
+                value={this.state.appointmentTime}
+                onChange={this.changeappointmentTime}
               />
             </fieldset>
 
